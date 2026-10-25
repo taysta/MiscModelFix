@@ -90,7 +90,7 @@ for(const [g,label] of games){
         <img src="${d.before}" alt="${d.model} in ${m}, stock game" loading="lazy" width="1280" height="800">
         <img class="after" src="${d.after}" alt="${d.model} in ${m}, with the fix" loading="lazy" width="1280" height="800">
         <div class="handle"></div><span class="tag b">Before</span><span class="tag a">After</span></div>
-        <div class="meta"><span class="m">${d.model}</span><span class="badges">${badges(d)}</span><span class="o">origin ${d.origin}</span></div>`;
+        <div class="meta"><span class="m">${d.game.toLowerCase()}/${m}/${d.model}</span><span class="badges">${badges(d)}</span><span class="o">origin ${d.origin}</span></div>`;
       sec.appendChild(c); wire(c.querySelector('.cmp'));
     }
   }

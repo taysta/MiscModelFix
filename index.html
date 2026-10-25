@@ -20,6 +20,7 @@ h1 code{font-size:26px}
 .stat b{display:block;font-size:22px}
 .stat span{color:var(--muted);font-size:13px}
 nav{position:sticky;top:0;z-index:5;background:var(--bg);padding:12px 0;border-bottom:1px solid var(--line);margin-bottom:8px}
+.navin{max-width:1000px;margin:0 auto;padding:0 16px}
 .navrow{display:grid;grid-template-columns:30px 1fr;gap:8px;align-items:start;margin:6px 0}
 .navrow .lab{color:var(--muted);font-size:13px;font-weight:600;line-height:28px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
@@ -83,7 +84,7 @@ for(const [g,label] of games){
   }
   main.appendChild(sec);
 }
-nav.innerHTML=navHtml;
+nav.innerHTML=`<div class="navin">${navHtml}</div>`;
 function wire(el){
   const set=p=>{p=Math.max(0,Math.min(100,p)); el.style.setProperty('--pos',p+'%'); el.setAttribute('aria-valuenow',Math.round(p));};
   const fromEvent=e=>{const r=el.getBoundingClientRect(); set((e.clientX-r.left)/r.width*100);};

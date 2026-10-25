@@ -57,9 +57,8 @@ footer{color:var(--muted);font-size:13px;padding:24px 16px 48px}
 <p class="lede">Jedi Academy culls each <code>misc_model_static</code> by checking whether one point, its origin plus <code>zoffset</code>, is in the viewer's PVS.
 Models mounted on walls or hanging from ceilings often have that point inside the wall or in the void, where it has no PVS cluster, so the game never draws them.
 The fix picks a point that is actually in open space (the centre of the model's bounds, then its corners) when the models are loaded. Models that are completely buried stay hidden.</p>
-<p class="lede">Drag the slider on each image: left is the stock game, right is with the fix. Every shot is from the stock maps.</p>
 <div class="stats" id="stats"></div>
-<p class="legend"><span class="badge yes">Collision</span><span class="badge partial">Partial collision</span><span class="badge no">No collision</span><span>whether the map's clip brushes block you where the model is. This comes from the map and is the same with or without the fix.</span></p>
+<p class="legend"><span class="badge yes">Collision</span><span class="badge partial">Partial collision</span><span class="badge no">No collision</span></p>
 </header>
 <nav id="nav"></nav>
 <main id="main"></main>

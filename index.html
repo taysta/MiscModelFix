@@ -48,6 +48,7 @@ h3 small{color:var(--muted);font-weight:400;font-size:14px;margin-left:6px}
 .badge.no{background:rgba(248,81,73,.15);color:#f85149;border-color:rgba(248,81,73,.4)}
 .legend{color:var(--muted);font-size:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin:4px 0 0}
 footer p{margin:6px 0}
+a{color:var(--accent)}
 footer{color:var(--muted);font-size:13px;padding:24px 16px 48px}
 </style>
 </head>
@@ -57,6 +58,7 @@ footer{color:var(--muted);font-size:13px;padding:24px 16px 48px}
 <p class="lede">Jedi Academy culls each <code>misc_model_static</code> by checking whether one point, its origin plus <code>zoffset</code>, is in the viewer's PVS.
 Models mounted on walls or hanging from ceilings often have that point inside the wall or in the void, where it has no PVS cluster, so the game never draws them.
 The fix picks a point that is actually in open space (the centre of the model's bounds, then its corners) when the models are loaded. Models that are completely buried stay hidden.</p>
+<p class="lede">Issue: <a href="https://github.com/JACoders/OpenJK/issues/1358">JACoders/OpenJK#1358</a></p>
 <div class="stats" id="stats"></div>
 <p class="legend"><span class="badge yes">Collision</span><span class="badge partial">Partial collision</span><span class="badge no">No collision</span></p>
 </header>
